@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Milestones</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Our Journey</h1>
+            <ul>
+                {% for milestone in milestones %}
+                    <li>
+                        <h2>{{ milestone.title }}</h2>
+                        <p>{{ milestone.description }}</p>
+                        <p>{{ milestone.date }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div> 
+    </body>
+</html>
