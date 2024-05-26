@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Wardrobe</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Virtual Wardrobe</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="item_name" placeholder="Item Name" required>
+            <input type="file" name="item_image" required>
+            <button type="submit">Add Item</button>
+        </form>
+        <ul>
+            {% for item in items %}
+                <li>
+                    <img src="{{ item.item_image.url }}" alt="{{ item.item_name }}">
+                    <p>{{ item.item_name }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

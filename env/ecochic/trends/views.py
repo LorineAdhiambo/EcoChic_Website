@@ -24,9 +24,9 @@ def wardrobe(request):
         return redirect('wardrobe')
     
     items = WardrobeItem.objects.filter(user=request.user)
-    return render(request, 'presentation/wardrobe.html', {'items': items})
+    return render(request, 'trends/wardrobe.html', {'items': items})
 
-def recommendatons(request, user_id):
+def recommendations(request, user_id):
     recommended_items = get_recommendations(user_id)
     return render(request, 'trends/recommendations.html', {'recommended_items': recommended_items})
 

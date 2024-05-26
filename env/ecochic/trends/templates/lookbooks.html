@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lookbooks</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Community Lookbooks</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="title" placeholder="Title" required>
+            <textarea name="description" placeholder="Description" required></textarea>
+            <input type="file" name="image" required>
+            <button type="submit">Add Lookbook</button>
+        </form>
+        <ul>
+            {% for lookbook in lookbooks %}
+                <li>
+                    <img src="{{ lookbook.image.url }}" alt="{{ lookbook.title }}">
+                    <h2>{{ lookbook.title }}</h2>
+                    <p>{{ lookbook.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
