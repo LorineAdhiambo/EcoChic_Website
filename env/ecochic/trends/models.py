@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+
+
 # Create your models here.
 class TeamMember(models.Model):
     name = models.CharField(max_length=150)
@@ -18,11 +20,4 @@ class WardrobeItem(models.Model):
     item_name = models.CharField(max_length=120)
     item_image = models.ImageField(upload_to='wardrobe_items/')
 
-class Lookbook(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=150)
-    description = models.TextField()
-    image = models.ImageField(upload_to='lookbooks/')
 
-    
-    

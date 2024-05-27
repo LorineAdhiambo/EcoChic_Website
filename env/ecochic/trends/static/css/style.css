@@ -1,0 +1,185 @@
+/* Reset styling(CSS) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+    
+    
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navigation */
+nav {
+    background: #0a0101;
+    color: #fff;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
+}
+
+/* Header section*/
+header {
+    background: #079af5;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0e0503 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+/* Showcase */
+#showcase {
+    min-height: 400px; 
+    text-align: center;
+    color: #fff;
+}
+
+#showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p {
+    font-size: 20px;
+    
+}
+
+/* Home page section */
+.home .showcase {
+    color: #f8ecec;
+    height: 400px;
+    background: #35424a;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../media/home.background.jpg);
+}
+
+.home .showcase h1 {
+    font-size: 4em;
+}
+
+.home .showcase p {
+    font-size: 1.5em;
+}
+
+.home .info {
+    background: #0f9df5;
+    color: #a7d5e7;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.home .info h2 {
+    font-size: 3em;
+}
+
+.home .info p {
+    font-size: 1.25em;
+}
+
+/* The team */
+.team .member {
+    margin: 20px;
+    padding: 20px;
+    background: #f4f4f4;
+    border: #ccc 1px dotted;
+    text-align: center;
+}
+
+.team .member img {
+    width: 50px;
+    height: 50px;
+    border: solid #ccc 1px;
+    border-radius: 50%;
+}
+
+.team .member h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.team .member p {
+    font-size: 1.1em;
+}
+
+/* wardrobe */
+.wardrobe .item {
+    margin: 20px;
+    padding: 20px;
+    background: #f4f4f4;
+    border: #ccc 1px dotted;
+}
+
+.wardrobe .item img {
+    max-width: 200px;
+}
+
+.wardrobe .item h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.wardrobe .item p {
+    font-size: 1.1em;
+}
+

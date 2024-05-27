@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>The Team</title>
+</head>
+<body>
+    <h1>Meet Our Team</h1>
+    
+    {% for member in team_members %}
+    <div class="team-member">
+        <img src="{{ member.image_url }}" alt="{{ member.name }}">
+        <p>{{ member.name }}</p>
+        <p>{{ member.position }}</p>
+        <p>{{ member.bio }}</p>
+    </div>
+    {% endfor %}
+
+    
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

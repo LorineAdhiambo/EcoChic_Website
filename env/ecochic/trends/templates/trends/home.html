@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EcoChic - Revolutionizing Fashion Sustainability</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1>Reen's Fashion Hub</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'team' %}">The Team</a></li>
+                        <li><a href="{% url 'wardrobe' %}">Wardrobe</a></li>
+                        <li><a href="{% url 'milestones' %}">Milestones</a></li>
+                        <li><a href="{% url 'trends' %}">Trends</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                        {% else %}
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                        {% endif %}
+                        
+                        
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}  
+        </main>
+        
+
+        <div class="container">
+            <button id="start-button">Start Voice Control</button>
+        </div>
+
+        <h1>Welcome to the world of Sustainable Fashion!</h1><br>
+
+        <p>Embark on a journey where style meets conscience, and every outfit tells a story of ethical elegance.<br>
+             At our fashion hub, we're passionate about reshaping the industry by embracing sustainability at its core.</p>
+             <br>
+
+        <p>Discover a curated collection of eco-friendly designs crafted with care, where innovation and sustainability intertwine to redefine modern fashion.<br>
+             Join us in celebrating fashion that not only looks good but also does good for the planet.</p>
+             <br>  
+             
+        <p>Let's stride together towards a more sustainable and stylish future.<br>
+             Explore our sustainable fashion offerings and be part of the change you wish to see in the world.</p>
+             <br>   
+
+        <hr>
+
+        <footer>
+            <p>EcoChic 2024. All Rights Reserved.</p>
+            <br>
+            <p>&copy; 2024 EcoChic </p>
+        </footer>
+        <script src="{% static 'js/voiceControl.js' %}"></script>
+    </body>
+</html>
